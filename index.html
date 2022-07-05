@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <title>Wordle Clone</title>
+        <link rel="stylesheet" href="./style.css">
+        <link href="./img/NYT-Wordle-Icon-192.png" rel="icon shortcut" />
+    </head>
+
+<body class="flex">
+    <header>
+        <div class="title">Wordle Clone</div>
+        <div id="button"><button onclick="darkLight()" id="light-dark">Light/Dark</button></div>  
+        </div>
+    </header>
+    <hr>
+
+    <div id="alert-container"></div>
+    <div class="board" id="game-board"></div>
+    
+    <div class="game-keyboard">
+        <div id="keyboard">
+            <div class="row" id="row1">
+                <button class="key" tabindex="-1" data-key="q">q</button>
+                <button class="key" tabindex="-1" data-key="w">w</button>
+                <button class="key" tabindex="-1" data-key="e">e</button>
+                <button class="key" tabindex="-1" data-key="r">r</button>
+                <button class="key" tabindex="-1" data-key="t">t</button>
+                <button class="key" tabindex="-1" data-key="y">y</button>
+                <button class="key" tabindex="-1" data-key="u">u</button>
+                <button class="key" tabindex="-1" data-key="i">i</button>
+                <button class="key" tabindex="-1" data-key="o">o</button>
+                <button class="key" tabindex="-1" data-key="p">p</button>
+            </div>
+            <div class="row" id="row2">
+                <div class="spacer-half"></div>
+                <button class="key" tabindex="-1" data-key="a">a</button>
+                <button class="key" tabindex="-1" data-key="s">s</button>
+                <button class="key" tabindex="-1" data-key="d">d</button>
+                <button class="key" tabindex="-1" data-key="f">f</button>
+                <button class="key" tabindex="-1" data-key="g">g</button>
+                <button class="key" tabindex="-1" data-key="h">h</button>
+                <button class="key" tabindex="-1" data-key="j">j</button>
+                <button class="key" tabindex="-1" data-key="k">k</button>
+                <button class="key" tabindex="-1" data-key="l">l</button>
+                <div class="spacer-half"></div>
+            </div>
+            <div class="row" id="row3">
+                <button class="key large" tabindex="-1" data-key="enter">enter</button>
+                <button class="key" tabindex="-1" data-key="z">z</button>
+                <button class="key" tabindex="-1" data-key="x">x</button>
+                <button class="key" tabindex="-1" data-key="c">c</button>
+                <button class="key" tabindex="-1" data-key="v">v</button>
+                <button class="key" tabindex="-1" data-key="b">b</button>
+                <button class="key" tabindex="-1" data-key="n">n</button>
+                <button class="key" tabindex="-1" data-key="m">m</button>
+                <button class="key large" tabindex="-1" data-key="backspace" title="backspace">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+                      </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function darkLight() {
+            var element = document.body;
+            element.classList.toggle("darkmode");
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
